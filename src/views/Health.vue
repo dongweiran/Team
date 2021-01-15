@@ -96,11 +96,20 @@
           :key="index"
           :id="'tab' + food.id"
           >{{ food.food_name }}
-          <div v-for="(foods, index) of foods" :key="index" class="div_img">
-            <img v-lazy="foods.foods_image" v-if="foods.foods_image != null" />
-          </div>
         </mt-tab-item>
       </mt-navbar>
+      <mt-tab-container>
+        <mt-tab-container-item>
+          <div v-for="(foods, index) of foods" :key="index" class="div_img">
+            <img v-lazy="foods.foods_image" v-if="foods.foods_image != null" />
+            <span class="span1">{{ foods.foods_name }}</span>
+            <span class="span2">{{ foods.foods_son }}.0千卡</span>
+          </div>
+          <p class="cozy" v-for="(foods, item) of foods" :key="item">
+            {{ foods.cozy }}
+          </p>
+        </mt-tab-container-item>
+      </mt-tab-container>
     </div>
     <div class="xian"></div>
     <div class="jian_2">
@@ -173,9 +182,53 @@
   </div>
 </template>
 <style scoped>
+.cozy {
+  float: right;
+  width: 250px;
+  height: 100px;
+  font-size: 15px;
+  font-family: 华文新魏;
+  color: rgb(22, 21, 21);
+}
+.div_img .span1 {
+  float: left;
+  font-size: 12px;
+  width: 80px;
+  height: 20px !important;
+  line-height: 20px !important;
+  margin: 0 !important;
+  text-align: left;
+  color: black !important;
+  padding-left: 3px;
+}
+.div_img .span2 {
+  float: left;
+  font-size: 12px;
+  width: 80px;
+  height: 20px !important;
+  line-height: 20px !important;
+  margin: 0 !important;
+  text-align: left;
+  padding-left: 3px;
+  color: gray;
+}
 .div_img > img {
-  width: 50px;
-  height: 60px;
+  width: 95px !important;
+  height: 50px !important;
+  float: left !important;
+  border-radius: 0 !important;
+  margin: 5px !important;
+}
+.div_img {
+  display: table-cell;
+  text-align: center;
+  height: 100px;
+  background: rgb(235, 229, 229);
+  border: 1px solid white;
+  border-radius: 5px;
+  float: left;
+  width: 110px;
+  margin-left: 10px;
 }
 .header {
   width: 100%;
@@ -347,6 +400,9 @@
   float: left;
   margin-left: -3px;
 }
+.mint-navbar .mint-tab-item {
+  padding: 6px 0 !important;
+}
 .jian_2 .tu_2 img {
   width: 100px;
   height: 100px;
@@ -364,6 +420,7 @@
 }
 </style>
 <script>
+import { Navbar, TabItem } from "mint-ui";
 export default {
   data() {
     return {
@@ -389,13 +446,20 @@ export default {
         this.$router.push("/health");
       }
     },
+    navactive(newVal) {
+      let cid = newVal.replace("tab", "");
+      this.page = 1;
+      this.loadFoods(cid, 1, (foods) => {
+        this.foods = foods;
+      });
+    },
   },
   mounted() {
     this.axios.get("/food").then((res) => {
       this.food = res.data.data;
     });
-    this.axios.get("/foods").then((res) => {
-      this.foods = res.data.data;
+    this.loadFoods(1, 1, (foods) => {
+      this.foods = foods;
     });
   },
   methods: {
@@ -405,7 +469,6 @@ export default {
       this.axios.get(url).then((res) => {
         this.totalPage = res.data.totalPage;
         callback(res.data.data);
-        console.log(res);
         // this.busy=false
         // this.$indicator
       });

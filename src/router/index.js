@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-01-09 09:52:26
- * @LastEditTime: 2021-01-14 16:19:14
+ * @LastEditTime: 2021-01-15 16:25:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \team\src\router\index.js
@@ -16,6 +16,21 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+  },
+  // {
+  //   path: "/article",
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () =>
+  //     import(/* webpackChunkName: "article" */ "../views/Article.vue"),
+  // },
+  {
+    path: "/news",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "news" */ "../views/News.vue"),
   },
   {
     path: "/login",
