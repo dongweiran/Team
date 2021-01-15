@@ -1,0 +1,21 @@
+.register {
+  height: 100%;
+  background: url("../assets/register-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+.register .mint-cell {
+  background: transparent;
+  color: white;
+}
+.register .mint-field-core {
+  background: transparent;
+  color: white;
+}
+
+.register .mint-button--primary {
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 15px;
+  background: gray;
+}

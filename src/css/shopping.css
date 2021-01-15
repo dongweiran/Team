@@ -1,0 +1,229 @@
+.shopping .input {
+  height: 70px;
+
+  background-color: #ff9b8b;
+}
+.shopping .input > :first-child {
+  position: relative;
+  top: 15px;
+  width: 300px;
+  height: 40px;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+.shopping .input > :last-child {
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-top: -25px;
+}
+.shopping .my-swipe .van-swipe-item {
+  color: #fff;
+  font-size: 20px;
+  line-height: 150px;
+  text-align: center;
+  background-color: #39a9ed;
+}
+/* 轮播图样式 */
+.shopping .lun > :first-child img {
+  width: 100%;
+  height: 220px;
+}
+.shopping .lun > :first-child {
+  width: 100%;
+  height: 100%;
+}
+.shopping .sort {
+  width: 100%;
+}
+.shopping .sort > ul {
+  text-align: center;
+  height: 100px;
+  background-color: azure;
+}
+.shopping .sort > ul > li {
+  width: 60px;
+  height: 70px;
+  float: left;
+  padding-left: 12px;
+  margin-top: 10px;
+}
+.shopping .sort > ul > li > :first-child {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.shopping .sort > ul > li > :last-child {
+  color: #000;
+  font-size: 12px;
+}
+.shopping .hand {
+  width: 100%;
+  height: 202px;
+}
+.shopping .hand > :first-child {
+  width: 25%;
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.shopping .hand > :last-child {
+  padding-left: 10px;
+  float: left;
+}
+.shopping .hand > :last-child > li {
+  float: left;
+  width: 110px;
+  height: 200px;
+  margin-left: 5px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #cccccc;
+}
+.shopping .hand > :last-child > li > img {
+  width: 100%;
+  border-radius: 10px;
+}
+.shopping .hand > :last-child > li > :nth-child(2) {
+  font-size: 14px;
+  margin-left: 9px;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100px;
+  float: left;
+}
+.shopping .hand > :last-child > li > :last-child {
+  margin-left: 2px;
+  font-size: 16px;
+  color: #f86811;
+  margin-top: 5px;
+  float: left;
+}
+.shopping .hand > :last-child > li > :last-child s {
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.shopping .hand > :last-child > li > :last-child button {
+  background-color: #f86811;
+  color: #fff;
+  border-radius: 10px;
+  opacity: 2;
+}
+.shopping .shop_ceil {
+  width: 100%;
+  height: 100px;
+}
+.shopping .shop_ceil > ul {
+  padding-left: 25px;
+}
+.shopping .shop_ceil > ul > li {
+  width: 70px;
+  height: 30px;
+  font: 14px "幼圆";
+  text-align: center;
+  color: gray;
+  line-height: 30px;
+  margin-left: 8px;
+  background-color: #efe4e6;
+  margin-top: 5px;
+  border-radius: 5px;
+  float: left;
+  margin-bottom: 3px;
+}
+.shopping .shop_ceil > ul > li:hover {
+  background-color: #f86811;
+  color: #fff;
+}
+.shopping .product {
+  width: 50%;
+  float: left;
+  height: 300px;
+}
+.shopping .product > ul > li > :first-child {
+  width: 100%;
+  height: 160px;
+  border-radius: 10px;
+}
+.shopping .product > ul {
+  text-align: center;
+}
+.shopping .product > ul > li {
+  width: 170px;
+  height: 270px;
+  float: left;
+  border-radius: 10px;
+  margin-left: 10px;
+  border: 1px solid #cccccc;
+}
+.shopping .product > ul > li > :nth-child(2) {
+  width: 100%;
+  height: 40px;
+  margin-top: 3px;
+}
+.shopping .product > ul > li > :nth-child(2) > :first-child {
+  /* margin-top: 3px; */
+  float: left;
+  font-weight: bold;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  width: 155px;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 2px;
+}
+/* .shopping .product > ul > li > :nth-child(2) > :last-child {
+  margin-top: 2px;
+  color: #d58f41;
+  float: right;
+} */
+.shopping .product > ul > li > :last-child {
+  color: #5a5a5a;
+  font-size: 12px;
+  height: 67px;
+}
+.shopping .product > ul > li > :last-child > .span {
+  margin-top: 2px;
+  color: #d58f41;
+  float: right;
+  font-size: 18px;
+  margin-right: 5px;
+  text-align: right;
+}
+.shopping .product > ul > li > :last-child > .left {
+  margin-top: 12px;
+  float: right;
+  text-decoration: line-through;
+  font-size: 16px;
+  width: 73px;
+  margin-right: 5px;
+  text-align: right;
+}
+.shopping .product > ul > li > :last-child > .right {
+  float: left;
+  margin-top: 15px;
+}
+.shopping .today {
+  width: 100%;
+  height: 55px;
+}
+.shopping .today > .mt_tabbar {
+  width: 100% !important;
+  /* margin-bottom: 27px; */
+}
+
+.shopping .product h6 {
+  font-size: 14px;
+  color: gray;
+  float: left;
+  margin-top: 5px;
+  margin-left: 10px;
+  text-overflow: ellipsis;
+  width: 155px;
+  white-space: nowrap;
+  overflow: hidden;
+}
